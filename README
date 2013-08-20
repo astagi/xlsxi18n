@@ -18,6 +18,10 @@ app_name    | ui_strings.xml |  App name | Nome dell'applicazione
 ------------------------------------------------------------------
 app_version | ui_strings.xml |  Version  | Versione
 ------------------------------------------------------------------
+weat_array  | ui_weather.xml |[Sun, Rain]| [Sole, Pioggia]
+------------------------------------------------------------------
+
+You don't need to escape ' or " and if you want to specify an array you just need to put your string between square brackets, separated by commas.
 
 After that, you need to write your config.json file, specifying default language, the corresponding column number in the xlsx file for the label, file and provided translations.
 
