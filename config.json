@@ -1,0 +1,11 @@
+{
+    "default": "en",
+    "label": 1,
+    "file": 2,
+    "translations" : {
+        "en": 4,
+        "it": 5,
+        "es": 6,
+        "ko": 7
+    }
+}
