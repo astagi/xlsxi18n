@@ -2,11 +2,6 @@ XLSXI18N
 ========
 Simple command line utility to generate language files for your app from xlsx files
 
-Requires
---------
-- Python 2.x
-- OpenPyXL (sudo pip install openpyxl)
-
 Configuration
 -------------
 You need to start writing your xlsx file, specifying LABELs, FILEs and translations in a table like this:

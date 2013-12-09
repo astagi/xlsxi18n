@@ -3,3 +3,6 @@
 res
 *.xlsx
 backup_res_*
+build
+dist
+*egg-info
