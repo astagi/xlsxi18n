@@ -75,13 +75,20 @@ def create_label_from_data(data):
     return label
 
 def main():
+
     if len(sys.argv) != 2:
         print "Usage: xlsxi18n path_file.xlsx"
         exit(0)
     else:
         filename = sys.argv[1]
 
-    f = open("config.json", "r")
+    config_file = "config.json"
+
+    if not os.path.exists(config_file):
+        print "Error! %s build file doesn't exist" % config_file
+        exit(0)
+
+    f = open(config_file, "r")
     json_file_content = f.read()
     print json_file_content
     global config 
