@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(name="xlsxi18n",
       py_modules=['xlsxi18n'],
-      version="1.0",
+      version="0.0",
       description="Simple command line utility to generate Android language files for your app from xlsx files.",
       license="MIT",
       author="Andrea Stagi",

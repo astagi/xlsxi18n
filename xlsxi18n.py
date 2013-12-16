@@ -5,6 +5,7 @@ import openpyxl
 import os, sys, shutil
 import json
 from datetime import datetime
+from optparse import OptionParser
 
 config = {}
 
@@ -76,16 +77,26 @@ def create_label_from_data(data):
 
 def main():
 
-    if len(sys.argv) != 2:
-        print "Usage: xlsxi18n path_file.xlsx"
+    usage = "Usage: %prog [options] path_file.xlsx"
+    parser = OptionParser(usage=usage)
+    parser.add_option( "-c", "--config-file", dest="config_file", 
+        default="config.json", help="Configuration file" )
+
+    (options, args) = parser.parse_args()
+
+    if len(args) == 0:
+        parser.print_usage()
         exit(0)
-    else:
-        filename = sys.argv[1]
+    if len(args) == 1:
+        filename = args[0]
 
-    config_file = "config.json"
+    if not os.path.exists(filename):
+        print "Error! %s xlsx file doesn't exist" % config_file
+        exit(0)
 
+    config_file = options.config_file
     if not os.path.exists(config_file):
-        print "Error! %s build file doesn't exist" % config_file
+        print "Error! %s configuration file doesn't exist" % config_file
         exit(0)
 
     f = open(config_file, "r")
